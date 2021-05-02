@@ -11,17 +11,14 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-
     <header class="page-header">
-      <div class="page-header__logo-block">
-        <a class="page-header__logo-link" >
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
-            <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип сайта туристического городка Седона">
-          </picture>
-        </a>
-      </div>
+      <a class="page-header__logo-link" >
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+          <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип сайта туристического городка Седона">
+        </picture>
+      </a>
       <nav class="main-navigation">
         <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -49,20 +46,20 @@
           </li>
         </ul>
       </nav>
-      <div class="page-header__image-block">
-        <img src="img/text-index.svg" width="282" height="214" alt="Приветствие городка Седона">
-      </div>
     </header>
 
     <main class="index-main">
       <h1 class="visually-hidden">Сайт туристического городка Седона</h1>
 
       <section class="advantages-city">
+        <div class="advantages-city__image-block">
+          <img src="img/text-index.svg" width="282" height="214" alt="Приветствие городка Седона">
+        </div>
         <div class="advantages-city__text-block">
           <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
-        <ul class="advantages-city__list advantages-city__list--with-foto">
+        <ul class="advantages-city__list">
           <li class="advantages-city__item advantages-city__item--with-foto">
             <div class="advantages-city__item-description">
               <h3 class="advantages-city__caption">Настоящий городок</h3>
@@ -105,8 +102,6 @@
               </picture>
             </div>
           </li>
-        </ul>
-        <ul class="advantages-city__list advantages-city__list--without-foto">
           <li class="advantages-city__item advantages-city__item--without-foto">
             <h3 class="advantages-city__caption">Небольшая площадь</h3>
             <p class="advantages-city__number">— №3 —</p>

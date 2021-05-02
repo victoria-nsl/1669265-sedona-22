@@ -12,15 +12,13 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__logo-block">
-        <a class="page-header__logo-link" href="index.html">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
-            <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип сайта туристического городка Седона">
-          </picture>
-        </a>
-      </div>
+      <a class="page-header__logo-link" href="index.html">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+          <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип сайта туристического городка Седона">
+        </picture>
+      </a>
       <nav class="main-navigation">
         <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -48,13 +46,12 @@
           </li>
         </ul>
       </nav>
-      <div class="page-header__image-block">
-        <img src="img/text-form-catalog.svg" width="229" height="39" alt="Название: SEDONA">
-      </div>
     </header>
 
     <main class="form-main">
-
+      <div class="form-main__image-block">
+        <img src="img/text-form-catalog.svg" width="229" height="39" alt="Название: SEDONA">
+      </div>
       <div class="form-main__text-block">
         <h1 class="form-main__title">
             Оставьте свой отзыв
@@ -67,93 +64,93 @@
 
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
 
-        <fieldset class="tourist-data">
-          <legend class = "tourist-data__title form__legend">
+        <fieldset class="form__fieldset  form__fieldset--tourist-data">
+          <legend class = "form__legend form__legend--tourist-data">
             Представьтесь:
           </legend>
-          <ul class="tourist-data__list">
-            <li class="tourist-data__item">
-              <label class="tourist-data__label form__label" for="tourist-name"> Имя*:</label>
-              <input class="tourist-data__input form__input-text" id="tourist-name" type="text" name="tourist-name" placeholder="Петр">
+          <ul class="form__list form__list--tourist-data">
+            <li class="form__item form__item--tourist-data">
+              <label class="form__label form__label--tourist-data" for="tourist-name"> Имя*:</label>
+              <input class="form__input-text form__input-text--tourist-data" id="tourist-name" type="text" name="tourist-name" placeholder="Петр">
             </li>
-            <li class="tourist-data__item">
-              <label class="tourist-data__label form__label" for="tourist-surname">Фамилия*:</label>
-              <input class="tourist-data__input form__input-text" id="tourist-surname" type="text" name="tourist-surname" placeholder="Иванов">
+            <li class="form__item form__item--tourist-data">
+              <label class="form__label form__label--tourist-data" for="tourist-surname">Фамилия*:</label>
+              <input class="form__input-text form__input-text--tourist-data" id="tourist-surname" type="text" name="tourist-surname" placeholder="Иванов">
             </li>
-            <li class="tourist-data__item">
-              <label class="tourist-data__label form__label" for="tourist-patronymic"> Отчество:</label>
-              <input class="tourist-data__input form__input-text" id="tourist-patronymic" type="text" name="tourist-patronymic" placeholder="Александрович">
+            <li class="form__item form__item--tourist-data">
+              <label class="form__label form__label--tourist-data" for="tourist-patronymic"> Отчество:</label>
+              <input class="form__input-text form__input-text--tourist-data" id="tourist-patronymic" type="text" name="tourist-patronymic" placeholder="Александрович">
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="tourist-contacts">
-          <legend class = "tourist-contacts__title form__legend">
+        <fieldset class="form__fieldset  form__fieldset--tourist-contacts">
+          <legend class = "form__legend form__legend--tourist-contacts">
             Контактная информация:
           </legend>
-          <ul class="tourist-contacts__list">
-            <li class="tourist-contacts__item">
-              <label class="tourist-contacts__label  form__label" for="contact-tel">Контактный телефон*:</label>
-              <input class="tourist-contacts__input-text form__input-text form__input-text--tel" id="contact-tel" type="tel" name="tel" placeholder="Введите телефон">
+          <ul class="form__list form__list--tourist-contacts ">
+            <li class="form__item form__item--tourist-contacts">
+              <label class="form__label  form__label--tourist-contacts" for="contact-tel">Контактный телефон*:</label>
+              <input class="form__input-text form__input-text--tourist-contacts form__input-text--tel" id="contact-tel" type="tel" name="tel" placeholder="Введите телефон">
             </li>
-            <li class="tourist-contacts__item">
-              <label class="tourist-contacts__label  form__label" for="contact-email">Электронная почта*:</label>
-              <input class="tourist-contacts__input-text form__input-text form__input-text--email" id="contact-email" type="email" name="email" placeholder="Введите e-mail">
+            <li class="form__item form__item--tourist-contacts">
+              <label class="form__label  form__label--tourist-contacts" for="contact-email">Электронная почта*:</label>
+              <input class="form__input-text form__input-text--tourist-contacts form__input-text--email" id="contact-email" type="email" name="email" placeholder="Введите e-mail">
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="tourist-impressions">
-          <legend class = "tourist-impressions__title form__legend">
+        <fieldset class="form__fieldset  form__fieldset--tourist-impressions">
+          <legend class = "form__legend form__legend--tourist-impressions">
             Ваше Общее впечатление:
           </legend>
-          <ul class="tourist-impressions__list">
-            <li class="tourist-impressions__item">
+          <ul class="form__list form__list--tourist-impressions">
+            <li class="form__item form__item--tourist-impressions">
               <input class="form__input form__input--radio visually-hidden" id="impressions-positive" type="radio" name="impressions" value="positive" checked>
               <label class="form__label form__label--radio" for="impressions-positive">Скорее положительное</label>
             </li>
-            <li class="tourist-impressions__item">
+            <li class="form__item form__item--tourist-impressions">
               <input class="form__input form__input--radio visually-hidden" id="impressions-negative" type="radio" name="impressions" value="negative">
               <label class="form__label form__label--radio" for="impressions-negative">Скорее отрицательное</label>
             </li>
-            <li class="tourist-impressions__item">
+            <li class="form__item form__item--tourist-impressions">
               <input class="form__input form__input--radio visually-hidden" id="impressions-unknown" type="radio" name="impressions" value="unknown">
               <label class="form__label form__label--radio" for="impressions-unknown">Затрудняюсь ответить</label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="tourist-sights">
-          <legend class = "tourist-sights__title form__legend">
+        <fieldset class="form__fieldset  form__fieldset--tourist-sights">
+          <legend class = "form__legend form__legend--tourist-sights">
             Посещенные достопримечательности:
           </legend>
-          <ul class="tourist-sights__list">
-            <li class="tourist-sights__item">
+          <ul class="form__list form__list--tourist-sights">
+            <li class="form__item form__item--tourist-sights">
               <input class="form__input form__input--checkbox visually-hidden" id="bridge" type="checkbox" name="bridge" checked>
               <label class="form__label form__label--checkbox" for="bridge">Мост Дьявола</label>
             </li>
-            <li class="tourist-sights__item">
+            <li class="form__item form__item--tourist-sights">
               <input class="form__input form__input--checkbox visually-hidden" id="mountain" type="checkbox" name="mountain" checked>
               <label class="form__label form__label--checkbox" for="mountain">Гора-Колокол</label>
             </li>
-            <li class="tourist-sights__item">
+            <li class="form__item form__item--tourist-sights">
               <input class="form__input form__input--checkbox visually-hidden" id="park" type="checkbox" name="park" checked>
               <label class="form__label form__label--checkbox" for="park">Слайд-парк</label>
             </li>
-            <li class="tourist-sights__item">
+            <li class="form__item form__item--tourist-sights">
               <input class="form__input form__input--checkbox visually-hidden " id="rock" type="checkbox" name="rock">
               <label class="form__label form__label--checkbox" for="rock">Красные скалы</label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="tourist-comments">
-          <legend class = "tourist-comments__title form__legend">
+        <fieldset class="form__fieldset  form__fieldset--tourist-comments">
+          <legend class = "form__legend form__legend--tourist-comments">
             Опишите свои эмоции:
           </legend>
-          <p class="tourist-comments__item">
+          <p class="form__item form__item--tourist-comments">
             <label class="visually-hidden" for="comments-text">Текст комментария</label>
-            <textarea class="tourist-comments__text" id="comments-text" name="comments" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea class="form__textarea" id="comments-text" name="comments" placeholder="Опишите подробно все свои восторги"></textarea>
           </p>
         </fieldset>
 
