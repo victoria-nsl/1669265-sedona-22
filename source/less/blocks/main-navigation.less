@@ -1,0 +1,116 @@
+.main-navigation {
+  position: relative;
+}
+
+.main-navigation__toggle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 23px;
+  height: 22px;
+  margin-left: 116px;
+  margin-top: 17px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-navigation__toggle:hover {
+  opacity: 0.6;
+}
+
+.main-navigation__toggle:active {
+  opacity: 0.3;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-navigation--closed .main-navigation__list {
+    display: none;
+  }
+
+  .main-navigation--nojs .main-navigation__list {
+    display: block;
+  }
+
+  .main-navigation--nojs .main-navigation__toggle {
+    display: none;
+  }
+}
+
+.main-navigation--closed .main-navigation__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 4px;
+  background-color: @blue-basic;
+  box-shadow: 0 9px 0 0  @blue-basic, 0 18px 0 0 @blue-basic;
+}
+
+.main-navigation--opened .main-navigation__toggle {
+  width: 22px;
+  height: 22px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 27px;
+    height: 4px;
+    background-color: @white-basic;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.main-navigation__item {
+  padding-top: 10px;
+  padding-bottom: 6px;
+  text-align: center;
+  background-color: @blue-basic;
+}
+
+.main-navigation__item:not(:first-child) {
+  box-shadow: inset 0 1px 0 rgba(@black-border, 0.2), inset 0 2px 0 rgba(@white-basic, 0.2);
+}
+
+.main-navigation__item:not(.main-navigation__item--current):hover {
+  background-color: @blue-basic-darker;
+}
+
+.main-navigation__item:not(.main-navigation__item--current):active {
+  background-color: @blue-basic-dark;
+}
+
+.main-navigation__item:not(.main-navigation__item--current):active .main-navigation__link {
+  opacity: 0.3;
+}
+
+.main-navigation__link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  color: @white-basic;
+}

@@ -1,0 +1,40 @@
+.social {
+  width: 54%;
+  padding-left: 64px;
+  padding-right: 65px;
+  margin-bottom: 40px;
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 6px;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+  background-color: @blue-basic;
+}
+
+.social__link:hover {
+  background-color: @blue-basic-darker;
+}
+
+.social__link:active {
+  background-color: @blue-basic-dark;
+}
+
+.social__link:active img {
+  opacity: 0.3;
+}

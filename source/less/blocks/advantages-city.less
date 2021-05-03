@@ -1,0 +1,156 @@
+.advantages-city__image-block {
+  background-color: @blue-basic;
+  background-image: url("../img/index-intro-triangle-mobile.svg"), url("../img/index-back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center, center center;
+  background-size: 100%;
+  padding-top: 88px;
+  padding-bottom: 83px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -28px;
+  margin-bottom: 30px;
+}
+
+.advantages-city__image-block img {
+  width: 282px;
+  height: 214px;
+}
+
+.advantages-city__text-block {
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 3px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.advantages-city__title {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.advantages-city__text {
+  width: 100%;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+// Пять причин
+
+.advantages-city__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages-city__item-description {
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.advantages-city__caption {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.advantages-city__number,
+.advantages-city__description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+//Причины с фотографией
+
+.advantages-city__item--with-foto {
+  background-color: @blue-basic;
+  color: @white-basic;
+  padding-top: 39px;
+  padding-bottom: 0;
+}
+
+.advantages-city__item--with-foto:nth-child(1) {
+  position: relative;
+  padding-top: 57px;
+}
+
+.advantages-city__item--with-foto:nth-child(1)::before {
+  content: "";
+  width: 768px;
+  height: 37px;
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../img/index-white-copy-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.advantages-city__caption--with-foto {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.advantages-city__number--with-foto {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.advantages-city__description--with-foto {
+  width: 105%;
+  margin-left: -8px;
+  margin-bottom: 39px;
+}
+
+.advantages-city__item-foto {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.advantages-city__item-foto img {
+  width: 520px;
+  height: 260px;
+}
+
+//Причины без фотографии
+
+.advantages-city__item--without-foto {
+  background-color: @gray-basic;
+  color: @black-basic;
+  padding-top: 26px;
+}
+
+
+.advantages-city__caption--without-foto {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.advantages-city__number--without-foto {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.advantages-city__description--without-foto {
+  width: 90%;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid @gray-border;
+}
+
+.advantages-city__item--without-foto:last-child .advantages-city__description--without-foto {
+  border-bottom: none;
+}
