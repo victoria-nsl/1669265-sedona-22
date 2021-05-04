@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-navigation">
+      <nav class="main-navigation main-navigation--closed main-navigation--nojs">
         <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -90,12 +90,20 @@
           </legend>
           <ul class="form__list form__list--tourist-contacts ">
             <li class="form__item form__item--tourist-contacts">
-              <label class="form__label  form__label--tourist-contacts" for="contact-tel">Контактный телефон*:</label>
-              <input class="form__input-text form__input-text--tourist-contacts form__input-text--tel" id="contact-tel" type="tel" name="tel" placeholder="Введите телефон">
+              <label class="form__label  form__label--tourist-contacts" for="contact-tel">
+                Контактный телефон*:
+              </label>
+              <div class ="form__input-text-wrapper form__input-text-wrapper--tourist-contacts form__input-text-wrapper--tourist-contacts-tel">
+                <input class="form__input-text form__input-text--tourist-contacts" id="contact-tel" type="tel" name="tel" placeholder="Введите телефон">
+              </div>
             </li>
             <li class="form__item form__item--tourist-contacts">
-              <label class="form__label  form__label--tourist-contacts" for="contact-email">Электронная почта*:</label>
-              <input class="form__input-text form__input-text--tourist-contacts form__input-text--email" id="contact-email" type="email" name="email" placeholder="Введите e-mail">
+              <label class="form__label  form__label--tourist-contacts" for="contact-email">
+                Электронная почта*:
+              </label>
+              <div class ="form__input-text-wrapper form__input-text-wrapper--tourist-contacts form__input-text-wrapper--tourist-contacts-email">
+                <input class="form__input-text form__input-text--tourist-contacts" id="contact-email" type="email" name="email" placeholder="Введите e-mail">
+              </div>
             </li>
           </ul>
         </fieldset>
@@ -107,15 +115,21 @@
           <ul class="form__list form__list--tourist-impressions">
             <li class="form__item form__item--tourist-impressions">
               <input class="form__input form__input--radio visually-hidden" id="impressions-positive" type="radio" name="impressions" value="positive" checked>
-              <label class="form__label form__label--radio" for="impressions-positive">Скорее положительное</label>
+              <label class="form__label form__label--radio" for="impressions-positive">
+                Скорее положительное
+              </label>
             </li>
             <li class="form__item form__item--tourist-impressions">
               <input class="form__input form__input--radio visually-hidden" id="impressions-negative" type="radio" name="impressions" value="negative">
-              <label class="form__label form__label--radio" for="impressions-negative">Скорее отрицательное</label>
+              <label class="form__label form__label--radio" for="impressions-negative">
+                Скорее отрицательное
+              </label>
             </li>
             <li class="form__item form__item--tourist-impressions">
               <input class="form__input form__input--radio visually-hidden" id="impressions-unknown" type="radio" name="impressions" value="unknown">
-              <label class="form__label form__label--radio" for="impressions-unknown">Затрудняюсь ответить</label>
+              <label class="form__label form__label--radio" for="impressions-unknown">
+                Затрудняюсь ответить
+              </label>
             </li>
           </ul>
         </fieldset>
@@ -127,11 +141,15 @@
           <ul class="form__list form__list--tourist-sights">
             <li class="form__item form__item--tourist-sights">
               <input class="form__input form__input--checkbox visually-hidden" id="bridge" type="checkbox" name="bridge" checked>
-              <label class="form__label form__label--checkbox" for="bridge">Мост Дьявола</label>
+              <label class="form__label form__label--checkbox" for="bridge">
+                Мост Дьявола
+              </label>
             </li>
             <li class="form__item form__item--tourist-sights">
               <input class="form__input form__input--checkbox visually-hidden" id="mountain" type="checkbox" name="mountain" checked>
-              <label class="form__label form__label--checkbox" for="mountain">Гора-Колокол</label>
+              <label class="form__label form__label--checkbox" for="mountain">
+                Гора-Колокол
+              </label>
             </li>
             <li class="form__item form__item--tourist-sights">
               <input class="form__input form__input--checkbox visually-hidden" id="park" type="checkbox" name="park" checked>
@@ -139,7 +157,9 @@
             </li>
             <li class="form__item form__item--tourist-sights">
               <input class="form__input form__input--checkbox visually-hidden " id="rock" type="checkbox" name="rock">
-              <label class="form__label form__label--checkbox" for="rock">Красные скалы</label>
+              <label class="form__label form__label--checkbox" for="rock">
+                Красные скалы
+              </label>
             </li>
           </ul>
         </fieldset>
@@ -148,20 +168,18 @@
           <legend class = "form__legend form__legend--tourist-comments">
             Опишите свои эмоции:
           </legend>
-          <p class="form__item form__item--tourist-comments">
+          <p class="form__item-tourist-comments">
             <label class="visually-hidden" for="comments-text">Текст комментария</label>
             <textarea class="form__textarea" id="comments-text" name="comments" placeholder="Опишите подробно все свои восторги"></textarea>
           </p>
         </fieldset>
 
         <div class="form__wrapper-button-notice">
-          <div class="form__button-wrapper">
-            <button class="button" type="submit">
-              <span>
-                Отправить отзыв
-              </span>
-            </button>
-          </div>
+          <button class="button button--send-feedback" type="submit">
+            <span>
+              Отправить отзыв
+            </span>
+          </button>
           <p class="form__notice">
             * — Обязательные поля
           </p>
@@ -206,5 +224,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

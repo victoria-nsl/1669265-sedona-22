@@ -1,0 +1,319 @@
+.form {
+  margin-bottom: 48px;
+}
+
+.form fieldset {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.form__list {
+  margin: 0 auto;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.form__legend {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.form__legend::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: @gray-background-hover;
+}
+
+
+// Текстовые поля ввода
+
+.form__input-text {
+  padding: 18px 10px 14px 22px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  box-sizing: border-box;
+  color: @black-basic;
+  background-color: @gray-background;
+  border: none;
+  height: 58px;
+}
+
+.form__input-text::placeholder {
+  font-family: inherit;
+  color: @black-basic;
+  opacity: 1;
+}
+
+.form__input-text:hover {
+  background-color: @gray-background-hover;
+}
+
+.form__input-text:active {
+  padding: 14px 6px 10px 18px;
+  background-color: @white-basic;
+  border: 4px solid @gray-background-hover;
+  outline: none;
+}
+
+//ФИО Туриста
+
+.form__legend--tourist-data {
+  padding-top: 20px;
+  padding-bottom: 19px;
+}
+
+.form__list--tourist-data {
+  margin-bottom: 26px;
+}
+
+.form__item--tourist-data {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form__label--tourist-data {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.form__input-text--tourist-data {
+  margin-left: 16px;
+  flex-grow: 1;
+}
+
+//Контактные данные Туриста
+
+.form__legend--tourist-contacts {
+  padding-top: 20px;
+  padding-bottom: 17px;
+}
+
+.form__list--tourist-contacts {
+  margin-bottom: 28px;
+}
+
+.form__item--tourist-contacts {
+  margin: 0 auto;
+  margin-bottom: 14px;
+}
+
+.form__label--tourist-contacts {
+  display: block;
+  width: 69%;
+  padding-left: 22px;
+  padding-right: 66px;
+  margin-bottom: 7px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+
+.form__input-text--tourist-contacts {
+  width: 100%;
+}
+
+.form__input-text-wrapper--tourist-contacts {
+  position: relative;
+}
+
+.form__input-text-wrapper--tourist-contacts::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background-color: @gray-background-input-after;
+}
+
+.form__input-text-wrapper--tourist-contacts-tel::after {
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.form__input-text-wrapper--tourist-contacts-email::after {
+  background-image: url("../../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+// Чекбоксы, радиокнопки
+
+.form__label--checkbox {
+  position: relative;
+  margin-left: 79px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: none;
+}
+
+.form__label--radio {
+  position: relative;
+  margin-left: 78px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: none;
+}
+
+.form__input--checkbox + .form__label--checkbox::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -79px;
+  width: 55px;
+  height: 55px;
+  border-radius: 5px;
+  background-color: @gray-background;
+}
+
+.form__input--checkbox:checked + .form__label--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -63px;
+  width: 23px;
+  height: 16px;
+  background-image: url("../img/icon-check.svg");
+  background-repeat: no-repeat;
+}
+
+
+.form__input--radio + .form__label--radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -78px;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  background-color: @gray-background;
+}
+
+.form__input--radio:checked + .form__label--radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -60px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: @black-radio;
+}
+
+.form__input--checkbox:hover + .form__label--checkbox::before,
+.form__input--radio:hover + .form__label--radio::before {
+  background-color: @gray-background-hover;
+  border-color: @gray-background-hover;
+}
+
+.form__input--checkbox:active + .form__label--checkbox::before,
+.form__input--radio:active + .form__label--radio::before {
+  background-color: @gray-background-active;
+  border-color: @gray-background-active;
+}
+
+
+.form__input--checkbox:active + .form__label--checkbox::after,
+.form__input--radio:active + .form__label--radio::after {
+  opacity: 0.3;
+}
+
+.form__input--checkbox:focus + .form__label--checkbox::before,
+.form__input--radio:focus + .form__label--radio::before {
+  outline: 2px solid @black-basic;
+}
+
+//Ваше общее впечатление
+
+.form__legend--tourist-impressions {
+  padding-top: 20px;
+  padding-bottom: 37px;
+}
+
+.form__item--tourist-impressions {
+  margin-bottom: 43px;
+}
+
+//Посещенные достопримечательности
+
+.form__legend--tourist-sights {
+  padding-top: 15px;
+  padding-bottom: 36px;
+}
+
+.form__item--tourist-sights {
+  margin-bottom: 54px;
+}
+
+.form__item--tourist-sights:last-child {
+  margin-bottom: 39px;
+}
+
+//textarea Опишите свои эмоции
+
+.form__legend--tourist-comments {
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.form__item-tourist-comments {
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 48px;
+}
+
+.form__textarea {
+  width: 100%;
+  height: 160px;
+  padding: 13px 21px 29px 21px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  background-color: @gray-background;
+  color: @black-basic;
+  border: none;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.form__textarea::placeholder {
+  color: @black-basic;
+  opacity: 1;
+}
+
+// Кнопка и примечание
+
+.form__wrapper-button-notice {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.form__notice {
+  display: none;
+}
