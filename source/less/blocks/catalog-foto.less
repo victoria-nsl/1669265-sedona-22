@@ -1,0 +1,83 @@
+.catalog-foto__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-foto__item {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 22px;
+  padding-bottom: 3px;
+  text-align: center;
+}
+
+.catalog-foto__item:nth-child(3),
+.catalog-foto__item:nth-child(4) {
+  padding-top: 20px;
+}
+
+.catalog-foto__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: @gray-background-hover;
+}
+
+.catalog-foto__item img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.catalog-foto__item-text {
+  width: 100%;
+  padding: 11px 0 15px  0;
+  text-align: start;
+}
+
+.catalog-foto__caption {
+  width: 100%;
+  padding-left: 0;
+  margin: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.catalog-foto__author {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 13px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: none;
+}
+
+.catalog-foto__like {
+  position: relative;
+  margin: 0;
+  width: 86%;
+  padding-left: 37px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.catalog-foto__like::before {
+  content: "";
+  width: 23px;
+  height: 21px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/icon-like.svg");
+  background-repeat: no-repeat;
+}

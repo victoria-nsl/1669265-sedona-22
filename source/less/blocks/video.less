@@ -1,0 +1,126 @@
+.video {
+  margin-bottom: 50px;
+}
+
+.video__text-block {
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 32px;
+  text-align: center;
+  margin-bottom: 33px;
+}
+
+.video__question {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.video__offer {
+  width: 85%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.video__video-block img {
+  display: block;
+  width: 100%;
+  height: 201px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.video__wrapper-slider-switches {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.video__slider-range {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-top: -45px;
+  padding-top: 22px;
+  padding-bottom: 20px;
+  background-color: rgba(@black-basic, 0.6);
+}
+
+.video__slider-scale {
+  position: relative;
+  width: 84%;
+  height: 3px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: rgba(@white-basic, 0.2);
+}
+
+.video__slider-bar {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: @white-basic;
+  cursor: pointer;
+}
+
+.video__switches {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 23px 23px 21px 25px;
+  box-sizing: border-box;
+  background-color: @gray-background;
+}
+
+.video__button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+
+  &--replay {
+    margin-right: 57%;
+  }
+
+  &--fullscreen {
+    margin-left: 13%;
+  }
+}
+
+.video__button svg {
+  fill: @gray-switches;
+}
+
+.video__button--replay svg {
+  width: 16px;
+  height: 20px;
+}
+
+.video__button--subtitles svg {
+  width: 32px;
+  height: 20px;
+}
+
+.video__button--fullscreen svg {
+  width: 20px;
+  height: 20px;
+}
+
+.video__button:hover svg {
+  fill: @black-radio;
+}
+
+.video__button:active svg {
+  fill: @black-radio;
+  fill-opacity: 0.3;
+}
