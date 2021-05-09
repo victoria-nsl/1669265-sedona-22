@@ -1,6 +1,19 @@
 .page-footer {
   margin: 0 auto;
   padding: 26px 20px 18px 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 84%;
+    padding: 34px 60px 38px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+    padding: 34px 120px 38px 120px;
+  }
 }
 
 .page-footer__text {
@@ -10,4 +23,9 @@
   font-size: 21px;
   line-height: 26px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-right: -8px;
+  }
 }

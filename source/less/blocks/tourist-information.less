@@ -1,17 +1,47 @@
 .tourist-information {
+  display: grid;
+  grid-column: 1/-1;
   padding: 0 20px;
   margin: 0 auto;
   padding-top: 35px;
-  margin-bottom: 35px;
+  margin-bottom: 10px;
   text-align: center;
   list-style: none;
   background-color: @white-basic;
   color: @black-basic;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 0;
+  }
 }
 
 .tourist-information__item {
   width: 100%;
   margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding-top: 160px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 80px;
+  }
+}
+
+.tourist-information__item--souvenirs {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
 }
 
 .tourist-information__caption {
@@ -25,8 +55,55 @@
   font-size: 18px;
   line-height: 26px;
   text-align: start;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
+    font-size: 21px;
+    text-align: center;
+  }
 }
 
+.tourist-information__caption--housing {
+  @media (min-width: @tablet-width) {
+    width: 76%;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 282px;
+    padding-left: 58px;
+    padding-right: 60px;
+  }
+}
+
+.tourist-information__caption--meal {
+  @media (min-width: @tablet-width) {
+    width: 74%;
+    padding-left: 31px;
+    padding-right: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 313px;
+    padding-left: 43px;
+    padding-right: 44px;
+  }
+}
+
+.tourist-information__caption--souvenirs {
+  @media (min-width: @tablet-width) {
+    width: 79%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+    padding-left: 78px;
+    padding-right: 80px;
+  }
+}
 
 .tourist-information__caption--housing::before {
   position: absolute;
@@ -38,6 +115,15 @@
   height: 37px;
   background-image: url("../img/icon-house.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: -98px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 72px;
+    background-size: cover;
+  }
 }
 
 .tourist-information__caption--souvenirs::before {
@@ -50,6 +136,15 @@
   height: 38px;
   background-image: url("../img/icon-gift.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: -101px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 75px;
+    background-size: cover;
+  }
 }
 
 .tourist-information__caption--meal::before {
@@ -62,8 +157,16 @@
   height: 35px;
   background-image: url("../img/icon-burger.svg");
   background-repeat: no-repeat;
-}
 
+  @media (min-width: @tablet-width) {
+    top: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 69px;
+    background-size: cover;
+  }
+}
 
 .tourist-information__description {
   width: 75%;
@@ -74,4 +177,66 @@
   font-size: 14px;
   line-height: 21px;
   text-align: start;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+  }
+}
+
+.tourist-information__description--housing {
+  @media (min-width: @tablet-width) {
+    width: 76%;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 282px;
+    padding-left: 58px;
+    padding-right: 60px;
+  }
+}
+
+.tourist-information__description--meal {
+  @media (min-width: @tablet-width) {
+    width: 74%;
+    padding-left: 31px;
+    padding-right: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 313px;
+    padding-left: 43px;
+    padding-right: 44px;
+  }
+}
+
+.tourist-information__description--souvenirs {
+  @media (min-width: @tablet-width) {
+    width: 79%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+    padding-left: 78px;
+    padding-right: 80px;
+  }
+}
+
+.tourist-information__description--meal br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.tourist-information__description--souvenirs br {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
