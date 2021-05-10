@@ -5,16 +5,42 @@
   padding-top: 52px;
   padding-bottom: 63px;
   text-align: center;
-  background-color: @blue-basic;
+  background-color: @blue-sky;
   background-image: url("../img/intro-triangle-mobile.svg"), url("../img/form-back-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: bottom center, center center;
+  background-position: center bottom -1px, center bottom;
   background-size: 100%;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-bottom: 64px;
+    padding-top: 95px;
+    padding-bottom: 112px;
+    background-image: url("../img/intro-triangle-tablet.svg"), url("../img/form-back-tablet.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-bottom: 110px;
+    padding-top: 102px;
+    padding-bottom: 119px;
+    background-image: url("../img/intro-triangle-desktop.svg"), url("../img/form-back-desktop.jpg");
+  }
 }
 
 .form-main__image-block img {
   width: 229px;
   height: 39px;
+
+  @media (min-width: @tablet-width) {
+    width: 457px;
+    height: 78px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 460px;
+    height: 79px;
+  }
 }
 
 .form-main__text-block {
@@ -23,6 +49,16 @@
   padding-top: 0;
   text-align: center;
   margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px;
+    margin-bottom: 57px;
+  }
 }
 
 .form-main__title {
@@ -32,6 +68,20 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    width: 434px;
+    margin: 0 auto;
+    margin-bottom: 33px;
+    padding-left: 106px;
+    padding-right: 108px;
+    font-size: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 262px;
+    padding-right: 264px;
+  }
 }
 
 .form-main__description {
@@ -40,4 +90,24 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 440px;
+    margin: 0 auto;
+    padding-left: 104px;
+    padding-right: 104px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 260px;
+    padding-right: 260px;
+  }
+}
+
+.form-main__description br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }

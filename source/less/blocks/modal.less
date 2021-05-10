@@ -7,6 +7,11 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .modal__text {
@@ -22,14 +27,23 @@
   display: none;
   margin: 0 auto;
   padding: 0 20px;
-  text-align: center;
   padding-top: 40px;
   padding-bottom: 35px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 307px;
+    padding: 50px 47px 49px 46px;
+  }
 }
 
 .modal__title--failure {
   width: 100%;
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 307px;
+  }
 }
 
 .modal__text--failure {
@@ -37,6 +51,13 @@
   padding-left: 21px;
   padding-right: 22px;
   margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 307px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 37px;
+  }
 }
 
 //Ваш отзыв отправлен
@@ -45,6 +66,12 @@
   display: none;
   padding-top: 38px;
   padding-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 640px;
+    margin: 0 auto;
+    padding-top: 47px;
+  }
 }
 
 .modal__wrapper-text--success {
@@ -52,17 +79,35 @@
   padding: 0 20px;
   text-align: center;
   margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 99px 0 97px;
+    margin-bottom: 42px;
+  }
 }
 
 .modal__title--success {
   width: 100%;
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 444px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
 }
 
 .modal__text--success {
   width: 87%;
   padding-left: 17px;
   padding-right: 19px;
+
+  @media (min-width: @tablet-width) {
+    width: 444px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .modal__wrapper-button--success {
@@ -70,4 +115,8 @@
   padding: 20px;
   text-align: center;
   background-color: @gray-background;
+
+  @media (min-width: @tablet-width) {
+    padding: 44px 91px;
+  }
 }
