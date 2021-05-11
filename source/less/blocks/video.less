@@ -1,13 +1,34 @@
 .video {
   margin-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+    margin: 0 auto;
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px;
+    margin: 0 auto;
+    margin-bottom: 88px;
+  }
 }
 
 .video__text-block {
-  margin: 0 auto;
   padding: 0 20px;
-  padding-top: 32px;
-  text-align: center;
+  margin: 0 auto;
   margin-bottom: 33px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .video__question {
@@ -17,6 +38,19 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    width: 445px;
+    padding-left: 101px;
+    padding-right: 102px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 34px;
+  }
 }
 
 .video__offer {
@@ -27,6 +61,13 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 445px;
+    padding-left: 101px;
+    padding-right: 102px;
+    margin: 0 auto;
+  }
 }
 
 .video__video-block img {
@@ -35,21 +76,48 @@
   height: 201px;
   margin: 0 auto;
   object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 500px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
 }
 
 .video__wrapper-slider-switches {
-  margin: 0 auto;
   padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
 }
 
 .video__slider-range {
   position: relative;
   z-index: 2;
   width: 100%;
-  margin-top: -45px;
   padding-top: 22px;
   padding-bottom: 20px;
+  margin-top: -45px;
   background-color: rgba(@black-basic, 0.6);
+
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    margin-top: -92px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
 }
 
 .video__slider-scale {
@@ -59,6 +127,18 @@
   margin: 0 auto;
   box-sizing: border-box;
   background-color: rgba(@white-basic, 0.2);
+
+  @media (min-width: @tablet-width) {
+    width: 60%;
+    margin-left: 93px;
+    margin-right: 166px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 540px;
+    margin-left: 93px;
+    margin-right: 167px;
+  }
 }
 
 .video__slider-bar {
@@ -66,11 +146,15 @@
   top: 50%;
   left: 40px;
   transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background-color: @white-basic;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    left: 117px;
+  }
 }
 
 .video__switches {
@@ -81,6 +165,19 @@
   padding: 23px 23px 21px 25px;
   box-sizing: border-box;
   background-color: @gray-background;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    padding: 36px 40px 37px 35px;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
 }
 
 .video__button {
@@ -96,6 +193,11 @@
 
 .video__button svg {
   fill: @gray-switches;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    fill: @white-basic;
+  }
 }
 
 .video__button--replay svg {
@@ -115,9 +217,19 @@
 
 .video__button:hover svg {
   fill: @black-radio;
+
+  @media (min-width: @tablet-width) {
+    fill: @white-basic;
+    fill-opacity: 0.6;
+  }
 }
 
 .video__button:active svg {
   fill: @black-radio;
   fill-opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    fill: @white-basic;
+    fill-opacity: 0.3;
+  }
 }
