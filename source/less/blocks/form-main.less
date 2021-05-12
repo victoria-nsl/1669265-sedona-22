@@ -6,17 +6,27 @@
   margin-bottom: 36px;
   text-align: center;
   background-color: @blue-sky;
-  background-image: url("../img/intro-triangle-mobile.svg"), url("../img/form-back-mobile.jpg");
+  background-image: url("../img/intro-triangle-mobile.svg"), url("../img/form-catalog-back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center bottom -1px, center bottom;
   background-size: 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/intro-triangle-mobile.svg"), url("../img/form-catalog-back-mobile@2x.jpg");
+    background-size: 100% auto;
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 95px;
     padding-bottom: 112px;
     margin-top: 0;
     margin-bottom: 64px;
-    background-image: url("../img/intro-triangle-tablet.svg"), url("../img/form-back-tablet.jpg");
+    background-image: url("../img/intro-triangle-tablet.svg"), url("../img/form-catalog-back-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-triangle-tablet.svg"), url("../img/form-catalog-back-tablet@2x.jpg");
+      background-size: 100% auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -24,7 +34,12 @@
     padding-bottom: 119px;
     margin: 0;
     margin-bottom: 110px;
-    background-image: url("../img/intro-triangle-desktop.svg"), url("../img/form-back-desktop.jpg");
+    background-image: url("../img/intro-triangle-desktop.svg"), url("../img/form-catalog-back-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-triangle-desktop.svg"), url("../img/form-catalog-back-desktop@2x.jpg");
+      background-size: 100% auto;
+    }
   }
 }
 

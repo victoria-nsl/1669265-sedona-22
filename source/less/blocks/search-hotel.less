@@ -82,6 +82,10 @@
   }
 }
 
+.search-hotel__map-block {
+  position: relative;
+}
+
 .search-hotel__map-block iframe {
   width: 100%;
   height: 350px;
@@ -89,14 +93,11 @@
 }
 
 .search-hotel__map-block img {
-  width: 320px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 350px;
-
-  @media (min-width: @tablet-width) {
-    width: 768px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1200px;
-  }
+  margin: 0 auto;
+  object-fit: cover;
 }

@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HTML Academy: Седона- главная страница</title>
+    <title>HTML Academy: Седона - главная страница</title>
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <div class="page-body__inner">
@@ -78,6 +80,10 @@
                 </div>
                 <div class="advantages-city__item-foto">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/index-photo-1-desktop.webp 1x, img/index-photo-1-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/index-photo-1-tablet.webp 1x, img/index-photo-1-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/index-photo-1-mobile.webp 1x, img/index-photo-1-mobile@2x.webp 2x">
+
                     <source media="(min-width: 1200px)" srcset="img/index-photo-1-desktop.jpg 1x, img/index-photo-1-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/index-photo-1-tablet.jpg 1x, img/index-photo-1-tablet@2x.jpg 2x">
                     <img src="img/index-photo-1-mobile.jpg" srcset="img/index-photo-1-mobile@2x.jpg 2x"  alt= "Фото гостиницы в городке Седона">
@@ -128,9 +134,13 @@
                 </div>
                 <div class="advantages-city__item-foto">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/index-photo-2-desktop.webp 1x, img/index-photo-2-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/index-photo-2-tablet.webp 1x, img/index-photo-2-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/index-photo-2-mobile.webp 1x, img/index-photo-2-mobile@2x.webp 2x">
+
                     <source media="(min-width: 1200px)" srcset="img/index-photo-2-desktop.jpg 1x, img/index-photo-2-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/index-photo-2-tablet.jpg 1x, img/index-photo-2-tablet@2x.jpg 2x">
-                    <img src="img/index-photo-2-mobile.jpg" srcset="img/index-photo-1-mobile@2x.jpg 2x"  alt= "Фото гористой местности">
+                    <img src="img/index-photo-2-mobile.jpg" srcset="img/index-photo-2-mobile@2x.jpg 2x"  alt= "Фото гористой местности">
                   </picture>
                 </div>
               </div>
@@ -194,6 +204,10 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991482.9038850362!2d-112.14487562602588!3d35.286718100255584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1619862416076!5m2!1sru!2sru" height="350" style="border: 0;" allowfullscreen="" loading="lazy"  aria-hidden="false" tabindex="0" title="Карта США с г. Седона"></iframe>
             <noscript>
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1200px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
                 <img src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x"  alt="Карта США с г. Седона с маркером">
@@ -234,13 +248,13 @@
             Разработано
           </p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу HTML Academy">
-            <svg role ="img" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"/>
+            <svg role ="img" width="27" height="35">
+              <use xlink:href="img/svgsprite.svg#icon-htmlacademy"></use>
             </svg>
           </a>
         </div>
       </footer>
     </div>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>
