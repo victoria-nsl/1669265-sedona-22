@@ -14,3 +14,94 @@ navToggle.addEventListener("click", function() {
     navMain.classList.remove("main-navigation--opened");
   }
 });
+
+//Модальные окна
+
+if (document.querySelector(".modal")) {
+  const formFeedback = document.querySelector(".form");
+  const fieldName = document.querySelector(".form__input-text--name");
+  const fieldSurname = document.querySelector(".form__input-text--surname");
+  const fieldEmail = document.querySelector(".form__input-text--email");
+  const fieldTel = document.querySelector(".form__input-text--tel");
+  const popupFailure = document.querySelector(".modal--failure");
+  const popupSuccess = document.querySelector(".modal--success");
+  const buttonFailure = popupFailure.querySelector(".button--failure");
+  const buttonSuccess = popupSuccess.querySelector(".button--success");
+
+  formFeedback.addEventListener("submit", function (evt) {
+    if (!fieldName.value || !fieldSurname.value || !fieldEmail.value || !fieldTel.value) {
+      evt.preventDefault();
+      popupFailure.classList.add("modal-show");
+      if (!fieldName.value) {
+        fieldName.classList.remove("form__input-text-error");
+        fieldName.offsetWidth = fieldName.offsetWidth;
+        fieldName.classList.add("form__input-text-error");
+      }
+      if (!fieldSurname.value) {
+        fieldSurname.classList.remove("form__input-text-error");
+        fieldSurname.offsetWidth = fieldSurname.offsetWidth;
+        fieldSurname.classList.add("form__input-text-error");
+      }
+      if (!fieldEmail.value) {
+        fieldEmail.classList.remove("form__input-text-error");
+        fieldEmail.offsetWidth = fieldEmail.offsetWidth;
+        fieldEmail.classList.add("form__input-text-error");
+      }
+      if (!fieldTel.value) {
+        fieldTel.classList.remove("form__input-text-error");
+        fieldTel.offsetWidth = fieldTel.offsetWidth;
+        fieldTel.classList.add("form__input-text-error");
+      }
+    }
+    else {
+      popupSuccess.classList.add("modal-show");
+    }
+  })
+
+  buttonFailure.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupFailure.classList.remove("modal-show");
+    if (fieldName.classList.contains("form__input-text-error")) {
+      fieldName.classList.remove("form__input-text-error");
+    }
+    if (fieldSurname.classList.contains("form__input-text-error")) {
+      fieldSurname.classList.remove("form__input-text-error");
+    }
+    if (fieldEmail.classList.contains("form__input-text-error")) {
+      fieldEmail.classList.remove("form__input-text-error");
+    }
+    if (fieldTel.classList.contains("form__input-text-error")) {
+      fieldTel.classList.remove("form__input-text-error");
+    }
+  })
+
+  buttonSuccess.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupSuccess.classList.remove("modal-show");
+  })
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      if (popupFailure.classList.contains("modal-show")) {
+        evt.preventDefault();
+        popupFailure.classList.remove("modal-show");
+        if (fieldName.classList.contains("form__input-text-error")) {
+          fieldName.classList.remove("form__input-text-error");
+        }
+        if (fieldSurname.classList.contains("form__input-text-error")) {
+          fieldSurname.classList.remove("form__input-text-error");
+        }
+        if (fieldEmail.classList.contains("form__input-text-error")) {
+          fieldEmail.classList.remove("form__input-text-error");
+        }
+        if (fieldTel.classList.contains("form__input-text-error")) {
+          fieldTel.classList.remove("form__input-text-error");
+        }
+      }
+      if (popupSuccess.classList.contains("modal-show")) {
+        evt.preventDefault();
+        popupSuccess.classList.remove("modal-show");
+      }
+    }
+  });
+}

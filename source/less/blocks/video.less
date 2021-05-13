@@ -10,7 +10,7 @@
   @media (min-width: @desktop-width) {
     padding: 0 120px;
     margin: 0 auto;
-    margin-bottom: 88px;
+    margin-bottom: 86px;
   }
 }
 
@@ -68,6 +68,10 @@
     padding-right: 102px;
     margin: 0 auto;
   }
+}
+
+.video__video-block a {
+  display: block;
 }
 
 .video__video-block img {
@@ -167,11 +171,7 @@
   background-color: @gray-background;
 
   @media (min-width: @tablet-width) {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    padding: 36px 40px 37px 35px;
+    padding: 0;
     background-color: transparent;
   }
 
@@ -200,9 +200,29 @@
   }
 }
 
+.video__button-rigth-wrapper {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 41px;
+    top: 35px;
+    z-index: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 37px;
+  }
+}
+
 .video__button--replay svg {
   width: 16px;
   height: 20px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 35px;
+    top: 35px;
+    z-index: 2;
+  }
 }
 
 .video__button--subtitles svg {
