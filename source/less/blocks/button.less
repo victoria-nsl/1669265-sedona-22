@@ -31,7 +31,7 @@
 
 .button--send-feedback {
   width: 100%;
-  padding: 19px 49px 13px 49px;
+  padding: 19px 33px 13px 32px;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
@@ -75,6 +75,10 @@
 
 .button:active {
   background-color: @blue-basic-dark;
+}
+
+.button:disabled {
+  background-color: @gray-background-hover;
 }
 
 .button:active span {

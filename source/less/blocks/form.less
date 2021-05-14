@@ -109,7 +109,8 @@
 
 
 .form__legend--tourist-data {
-  padding-top: 20px;
+  padding-top: 10px;
+  margin: 0 auto;
   margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
@@ -129,7 +130,7 @@
 .form__legend--tourist-data::before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 1px;
@@ -189,9 +190,11 @@
 
 .form__legend--tourist-contacts {
   padding-top: 20px;
+  margin: 0 auto;
   margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
+    position: relative;
     width: 48%;
     padding-left: 169px;
     padding-right: 170px;
@@ -225,7 +228,7 @@
 .form__legend--tourist-contacts::before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 1px;
@@ -451,10 +454,20 @@
   border-color: @gray-background-active;
 }
 
+.form__input--checkbox:disabled + .form__label--checkbox::before,
+.form__input--radio:disabled + .form__label--radio::before {
+  background-color: rgba(@gray-background, 0.3);
+  border-color: rgba(@gray-background, 0.7);
+}
 
 .form__input--checkbox:active + .form__label--checkbox::after,
 .form__input--radio:active + .form__label--radio::after {
   opacity: 0.3;
+}
+
+.form__input--checkbox:disabled + .form__label--checkbox::after,
+.form__input--radio:disabled + .form__label--radio::after {
+  opacity: 0.1;
 }
 
 .form__input--checkbox:focus + .form__label--checkbox::before,
@@ -475,6 +488,7 @@
 
 .form__legend--tourist-impressions {
   padding-top: 20px;
+  margin: 0 auto;
   margin-bottom: 37px;
 
   @media (min-width: @tablet-width) {
@@ -495,7 +509,7 @@
 .form__legend--tourist-impressions::before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 1px;
@@ -527,10 +541,12 @@
 
 .form__legend--tourist-sights {
   padding-top: 15px;
+  margin: 0 auto;
   margin-bottom: 36px;
 
   @media (min-width: @tablet-width) {
-    width: 47.5%;
+    position: relative;
+    width: 308px;
     padding-left: 171px;
     padding-right: 169px;
     margin-bottom: 60px;
@@ -547,7 +563,7 @@
 .form__legend--tourist-sights::before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 1px;
@@ -626,8 +642,6 @@
 //textarea Опишите свои эмоции
 
 .form__fieldset--tourist-comments {
-  position: relative;
-
   @media (min-width: @tablet-width) {
     order: 5;
     width: 100%;
@@ -636,9 +650,11 @@
 
 .form__legend--tourist-comments {
   padding-top: 20px;
+  margin: 0 auto;
   margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
+    position: relative;
     width: 43%;
     padding: 22px 185px 0 183px;
     margin-bottom: 55px;
@@ -646,22 +662,16 @@
 
   @media (min-width: @desktop-width) {
     width: 280px;
-    padding: 22px 340px 0 340px;
+    padding: 20px 340px 0 340px;
     margin-bottom: 53px;
   }
 }
 
 
 .form__legend--tourist-comments::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: @gray-background-hover;
-
   @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
     top: 32px;
     left: 0;
     width: 19%;
@@ -715,10 +725,20 @@
   border: none;
   box-sizing: border-box;
   resize: none;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     padding-top: 18px;
   }
+}
+
+.form__textarea:hover {
+  background-color: @gray-background-hover;
+}
+
+.form__textarea:active {
+  background-color: @gray-background-active;
+  outline: none;
 }
 
 .form__textarea::placeholder {

@@ -5,7 +5,7 @@
   margin-top: -28px;
   margin-bottom: 36px;
   text-align: center;
-  background-color: @blue-sky;
+  background-color: @brown-background;
   background-image: url("../img/intro-triangle-mobile.svg"), url("../img/form-catalog-back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center bottom -1px, center bottom;
@@ -59,9 +59,11 @@
 }
 
 .form-main__text-block {
+  position: relative;
   padding: 0 20px;
   margin: 0 auto;
-  margin-bottom: 17px;
+  padding-bottom: 17px;
+  margin-bottom: 10px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -72,6 +74,20 @@
   @media (min-width: @desktop-width) {
     padding: 0 120px;
     margin-bottom: 57px;
+  }
+}
+
+.form-main__text-block::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: @gray-background-hover;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
