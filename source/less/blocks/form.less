@@ -395,6 +395,10 @@
   height: 55px;
   border-radius: 5px;
   background-color: @gray-background;
+
+  @media (min-width: @desktop-width) {
+    border-radius: 0;
+  }
 }
 
 .form__input--checkbox:checked + .form__label--checkbox::after {
@@ -557,6 +561,7 @@
     width: 308px;
     padding-left: 326px;
     padding-right: 326px;
+    margin-bottom: 59px;
   }
 }
 
@@ -663,7 +668,7 @@
   @media (min-width: @desktop-width) {
     width: 280px;
     padding: 20px 340px 0 340px;
-    margin-bottom: 53px;
+    margin-bottom: 54px;
   }
 }
 
@@ -707,7 +712,7 @@
   margin-bottom: 48px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 56px;
+    margin-bottom: 54px;
   }
 }
 
@@ -729,6 +734,10 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 18px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 20px;
   }
 }
 
@@ -764,7 +773,7 @@
 
   @media (min-width: @desktop-width) {
     width: 960px;
-    margin-bottom: 68px;
+    margin-bottom: 66px;
   }
 }
 
@@ -774,6 +783,7 @@
   @media (min-width: @tablet-width) {
     display: block;
     width: 30%;
+    margin-top: 18px;
     font-weight: 400;
     font-size: 14px;
     line-height: 26px;
@@ -782,5 +792,6 @@
 
   @media (min-width: @desktop-width) {
     width: 192px;
+    margin-top: 20px;
   }
 }
