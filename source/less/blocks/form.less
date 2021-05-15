@@ -359,6 +359,9 @@
 
 .form__label--checkbox {
   position: relative;
+  display: block;
+  width: 150px;
+  padding-left: 0;
   margin-left: 79px;
   cursor: pointer;
   font-weight: 700;
@@ -369,6 +372,9 @@
 
 .form__label--radio {
   position: relative;
+  display: block;
+  width: 185px;
+  padding-left: 0;
   margin-left: 78px;
   cursor: pointer;
   font-weight: 700;
@@ -617,6 +623,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    justify-content: start;
     width: 960px;
     padding-left: 0;
     padding-right: 0;
@@ -632,15 +639,27 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: auto;
+    width: 230px;
+    margin-right: 29px;
   }
 }
 
-.form__item--tourist-sights:last-child {
+.form__item--tourist-sights:nth-child(4n) {
   margin-bottom: 39px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 200px;
+    margin-right: 0;
+  }
+}
+
+.form__item--tourist-sights:nth-child(3n) {
+  @media (min-width: @desktop-width) {
+    margin-right: 8px;
   }
 }
 
